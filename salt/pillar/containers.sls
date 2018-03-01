@@ -1,2 +1,1 @@
-containers:
-    no: data
+containers: {}
