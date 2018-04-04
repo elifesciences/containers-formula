@@ -7,5 +7,6 @@ base:
         - elife.docker-push
         - elife.hub
         - elife.jenkins-node
+        - elife.aws-cli
         - elife.aws-credentials
         - containers
