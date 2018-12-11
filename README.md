@@ -1,13 +1,15 @@
 # `containers` formula
 
-This repository contains instructions for installing and configuring the `containers`
-project.
+This repository contains instructions for installing and configuring the `containers` project, a barebones VM capable of running `docker` and `docker-compose`.
 
 This repository should be structured as any Saltstack formula should, but it 
 should also conform to the structure required by the [builder](https://github.com/elifesciences/builder) 
 project.
 
-See the eLife [builder example project](https://github.com/elifesciences/builder-example-project)
-for a reference on how to integrate with the `builder` project.
-
 [MIT licensed](LICENCE.txt)
+
+## AMI usage
+
+This project is used to maintain a `containers--jenkins-plugin-ami` EC2 instance that is snapshotted to produce AMIs used by Jenkins to dynamically create nodes. It is almost never used to create ad-hoc or environment-based EC2 instances apart from testing.
+
+Producing an AMI strips secrets from the instance to favor portability of the image and avoid long-term secrets storage, Hence the template contains a [setup-secrets.sh](salt/containers/config/usr-local-bin-setup-secrets.sh) script used by [Jenkins EC2 plugin](https://alfred.elifesciences.org/configure) to access Vault on initialization and pull secrets such as an SSH key on the local filesystem.

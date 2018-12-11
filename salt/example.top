@@ -10,4 +10,5 @@ base:
         - elife.aws-cli
         - elife.aws-credentials
         - elife.ssh-credentials
+        - containers.vault-client
         - containers
