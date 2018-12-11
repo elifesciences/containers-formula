@@ -1,6 +1,6 @@
 credentials-environment-variables:
     file.managed:
-        - name: /etc/profile.d/vault
+        - name: /etc/profile.d/vault.sh
         - contents: |
             export VAULT_ADDR={{ pillar.containers.vault.addr }}
 
