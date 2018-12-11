@@ -6,6 +6,6 @@ credentials-environment-variables:
 
 credentials-setup:
     file.managed:
-        - name: /usr/local/bin/credentials-setup.sh
-        - source: salt://containers/config/usr-local-bin-credentials-setup.sh
-        #- mode: 755
+        - name: /usr/local/bin/setup-secrets.sh
+        - source: salt://containers/config/usr-local-bin-setup-secrets.sh
+        - mode: 755
