@@ -3,6 +3,7 @@ credentials-environment-variables:
         - name: /etc/profile.d/vault.sh
         - contents: |
             export VAULT_ADDR={{ pillar.containers.vault.addr }}
+            export VAULT_ROLE_ID={{ pillar.containers.vault.role_id }}
 
 credentials-setup:
     file.managed:
