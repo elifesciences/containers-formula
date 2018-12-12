@@ -1,6 +1,7 @@
 containers:
     vault:
         addr: https://master-server.elifesciences.org:8200
+        role_id: 00000000-0000-0000-0000-000000000000
 
 elife:
     aws:
