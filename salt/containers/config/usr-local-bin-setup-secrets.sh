@@ -6,7 +6,7 @@ set -e
 #VAULT_SECRET_ID
 
 # login
-VAULT_TOKEN="$(vault write -field=token auth/approle/login role_id="$VAULT_ROLE_ID" secret_id="$VAULT_SECRET_ID")"
+export VAULT_TOKEN="$(vault write -field=token auth/approle/login role_id="$VAULT_ROLE_ID" secret_id="$VAULT_SECRET_ID")"
 
 # SSH credentials
 rm -f ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
