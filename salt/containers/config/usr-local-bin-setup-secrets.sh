@@ -5,6 +5,9 @@ set -e
 #VAULT_ROLE_ID
 #VAULT_SECRET_ID
 
+# store secret id for future logins
+echo "$VAULT_SECRET_ID" > ~/.vault-secret-id
+
 # login
 export VAULT_TOKEN="$(vault write -field=token auth/approle/login role_id="$VAULT_ROLE_ID" secret_id="$VAULT_SECRET_ID")"
 
