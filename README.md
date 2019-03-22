@@ -17,3 +17,5 @@ Producing an AMI strips secrets from the instance to favor portability of the im
 ## Vault
 
 The `setup-secrets.sh` script authenticates with Vault using the [`AppRole`](https://www.vaultproject.io/docs/auth/approle.html) auth method, with the credentials `VAULT_ROLE_ID` (kind of username) and `VAULT_SECRET_ID` (kind of password) being used to issue a temporary `VAULT_TOKEN` that can be used to retrieve secrets.
+
+(do not merge, triggering builds to test the setup)
