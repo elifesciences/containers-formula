@@ -2,6 +2,7 @@ base:
     '*':
         - elife
         - elife.external-volume
+        - elife.java8
         - elife.jenkins-scripts
         - elife.docker
         - elife.docker-push
