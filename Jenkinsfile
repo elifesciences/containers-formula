@@ -1,1 +1,1 @@
-elifeFormula('containers', '', null, ['s2004'])
+elifeFormula('containers', '')
