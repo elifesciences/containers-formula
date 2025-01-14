@@ -14,5 +14,4 @@ base:
         - elife.vault-client
         - containers
         - elife.kubectl
-        - elife.helm
         - elife.pypi
