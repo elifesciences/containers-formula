@@ -18,6 +18,3 @@ elife:
             private_key: salt://elife/ssh-credentials/sample.id_rsa
     kubectl:
         username: ubuntu
-    helm:
-        username: ubuntu
-
